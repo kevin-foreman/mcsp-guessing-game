@@ -6,15 +6,14 @@ let randomNumber = Math.floor(Math.random() * 100 + 1);
 let guessCount = 1;
 let guessGame = function () {
     let userGuess = prompt("Please guess a number between 0 and 100");
-    console.log(randomNumber);
-    // let userGuess = document.getElementById(guessGame).value;
-    console.log(userGuess);
-    console.log(userName);
+    // console.log(randomNumber);
+    // console.log(userGuess);
+    // console.log(userName);
     if (userGuess >= 0 && userGuess <= 100) {
         if (userGuess == randomNumber) {
             alert(`Congratulations, ${userName} you guessed the random number, ${userGuess}`)
             alert("It took you " + guessCount + " guesses to get the random number!");
-            let replay = alert("Would you like to play again?");
+            let replay = alert("Would you like to play again? If not, just close your browser.");
             location.reload();
         } else if (userGuess > randomNumber) {
             alert("Lower, please guess again");
