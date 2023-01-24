@@ -80,7 +80,7 @@ Or
 
 -------------------------------------------------
 
-### Feature 2: Guess again!
+### Feature2:  Guess again!
 If the guess is higher or lower, ask the user to guess again. Your program should keep doing this until the guess is the same as the secret number. 
 Check Your Work! Test out your code, make sure everything is working correctly. Also make sure you don’t see any errors in console.
 

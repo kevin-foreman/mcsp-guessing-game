@@ -2,11 +2,19 @@ alert("This is the guessing game!");
 
 let guessGameBtn = document.querySelector("#guessGame");
 
-let numberGuess = Math.floor(Math.random() * 10 + 1);
+let randomNumber = Math.floor(Math.random() * 10 + 1);
 
 let guessGame = function() {
-    let doc = prompt("Please guess a number between 0 and 10");
-    console.log(numberGuess);
-    let guess = 1;
-    // if (numberGuess == userGuess)
+    let userGuess = prompt("Please guess a number between 0 and 10");
+    console.log(randomNumber);
+    let guessCount = 0;
+    // let userGuess = document.getElementById(guessGame).value;
+    console.log(userGuess);
+    if (userGuess >= 0 && userGuess <= 10) {
+        if (userGuess == randomNumber) {
+            alert("Congratulations, you guessed the random number " + userGuess)
+        } else {
+            alert("You did not successfully guess the random number " + randomNumber)
+        }
+    }
 };
