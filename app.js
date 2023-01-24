@@ -1,4 +1,6 @@
 alert("This is the guessing game!");
+let userName = prompt("Please enter your name");
+alert("Click the button below 'Hints' on the left to begin");
 let guessGameBtn = document.querySelector("#guessGame");
 let randomNumber = Math.floor(Math.random() * 100 + 1);
 let guessCount = 1;
@@ -7,11 +9,12 @@ let guessGame = function () {
     console.log(randomNumber);
     // let userGuess = document.getElementById(guessGame).value;
     console.log(userGuess);
+    console.log(userName);
     if (userGuess >= 0 && userGuess <= 100) {
         if (userGuess == randomNumber) {
-            alert("Congratulations, you guessed the random number " + userGuess)
+            alert(`Congratulations, ${userName} you guessed the random number, ${userGuess}`)
             alert("It took you " + guessCount + " guesses to get the random number!");
-            alert("Click OK to try again!");
+            let replay = alert("Would you like to play again?");
             location.reload();
         } else if (userGuess > randomNumber) {
             alert("Lower, please guess again");
