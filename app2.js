@@ -13,7 +13,7 @@ function init() {
     while (!validInput) {
         result = guessOnce();
 
-        if (result = guessOnce()) {
+        if (result === "Correct") {
             validInput = true;
         }
         alert(result);
